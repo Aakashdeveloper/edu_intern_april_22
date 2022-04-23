@@ -80,3 +80,28 @@ spellCheck
 html > main tah wrapper
 head> use to link css, JavaScript, title
 body > for rest of the content
+
+/////////
+inline
+> they always start in same line
+> only occupy the space which is required by the content
+> span, a ,img
+block
+> They start always from new line
+> they occupy whole width of screen irrespective of content
+> p , div, h1
+
+src > source
+alt > alternate
+rel > related To
+href > hyper refernce
+
+////////
+name
+image
+about you
+skill images
+map
+contact
+footer
+(copyright + social link)
