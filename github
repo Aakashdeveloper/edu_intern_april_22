@@ -1,0 +1,18 @@
+////first time from new folder
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/developerTech/aakashprofile.git
+git push -u origin main
+
+///next all time from same folder
+git add .
+git commit -m "first commit"
+git push
+
+
+/// to make live
+> settings > pages
+> source choose main
+> click save
