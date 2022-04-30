@@ -112,3 +112,41 @@ https://imgbb.com/
 disc
 circle
 square
+
+//////////
+inline
+styletag
+stylesheet
+
+inline>styletag>stylesheet
+
+inline
+{
+    color:red;
+    font-size:30px
+}
+
+styletag
+{
+    color:orange;
+    border:2px solid red;
+    height:200px
+}
+
+stylesheet
+{
+    height:250px;
+    font-size:40px;
+    background:red;
+}
+
+{
+    color:red;
+    font-size:30px;
+    border:2px solid red;
+    height:200px
+    background:red;
+}
+
+
+https://htmlcolorcodes.com/
