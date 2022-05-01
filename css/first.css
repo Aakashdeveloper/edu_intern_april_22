@@ -1,0 +1,48 @@
+body{
+    margin:auto
+}
+/* Header Section */
+#header{
+    height:60px;
+    width:100%;
+    background-color:rgb(231, 223, 82)
+}
+h1{
+  text-align:center;
+   color:red;
+} 
+h2{
+   text-align:center;
+   color:white
+}
+/* Card Section */
+#main{
+    display: inline-block
+}
+
+.card{
+    height:400px;
+    width:22%;
+    background-color:#458db3;
+    float:left;
+    margin-left:2%;
+    color:#fff;
+    overflow:scroll
+}
+.brown{
+    background-color:#9c898c;
+}
+#skyblue{
+background-color:#1b638a;
+}
+.badge{
+background-color:#ac9a8b
+}
+.card > img {
+height:200px;
+width:100%
+}
+/* Footer Section */
+footer{
+   text-align: center;
+}

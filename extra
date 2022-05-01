@@ -150,3 +150,22 @@ stylesheet
 
 
 https://htmlcolorcodes.com/
+
+//////
+> tagName
+className 
+> .
+> use for multiple element
+id  
+> #
+> should be used for unique element
+
+/// study HW
+position: Absolute
+position: relative
+
+solid
+dotted
+dashed
+double
+groove

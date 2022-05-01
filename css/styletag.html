@@ -1,7 +1,50 @@
 <html>
     <head>
         <title>Inline Css</title>
-        <link href="first.css" rel="stylesheet"/>
+        <style>
+            #header{
+                height:60px;
+                width:100%;
+                background-color:rgb(231, 223, 82)
+            }
+           h1{
+              text-align:center;
+               color:red;
+           } 
+           h2{
+               text-align:center;
+               color:white
+           }
+           #main{
+                display: inline-block
+           }
+           
+           .card{
+                height:400px;
+                width:22%;
+                background-color:#458db3;
+                float:left;
+                margin-left:2%;
+                color:#fff;
+                overflow:scroll
+           }
+           .brown{
+                background-color:#9c898c;
+           }
+           #skyblue{
+            background-color:#1b638a;
+           }
+           .badge{
+            background-color:#ac9a8b
+           }
+           .card > img {
+            height:200px;
+            width:100%
+           }
+           footer{
+               text-align: center;
+           }
+        </style>
     </head>
     <body>
         <div id="header">
