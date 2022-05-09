@@ -46,7 +46,7 @@ header{
 #logo{
     height:150px;
     width:150px;
-    background-color:white;
+    background-color:rgba(255, 255, 255, 60%);
     border-radius: 50%;
     margin: auto;
 }
@@ -159,4 +159,49 @@ footer{
 }
 .noBorder{
     border:none 
+}
+
+@media screen and (max-width:1600px){
+    body{
+        background-color:skyblue;
+    }
+}
+
+@media screen and (max-width:1400px){
+    body{
+        background-color:rgb(216, 177, 235);
+    }
+}
+@media screen and (max-width:1200px){
+    body{
+        background-color:rgb(233, 222, 171);
+    }
+    .tileContainer {
+        width: 45%;
+    }
+    #heading {
+        font-size: 45px;
+        margin-left: -9%;
+    }
+}
+
+@media screen and (max-width:1000px){
+    body{
+        background-color:rgb(187, 243, 197);
+    }
+}
+
+@media screen and (max-width:800px){
+    body{
+        background-color:rgb(170, 171, 185);
+    }
+    .tileContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    body{
+        background-color:rgb(231, 182, 168);
+    }
 }

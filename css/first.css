@@ -27,6 +27,14 @@ h2{
     float:left;
     margin-left:2%;
     color:#fff;
+}
+.imgDiv{
+    height:200px;
+    width:100%
+}
+.contentDiv{
+    height:200px;
+    width:100%;
     overflow:scroll
 }
 .brown{
@@ -38,7 +46,7 @@ background-color:#1b638a;
 .badge{
 background-color:#ac9a8b
 }
-.card > img {
+.imgDiv > img {
 height:200px;
 width:100%
 }
