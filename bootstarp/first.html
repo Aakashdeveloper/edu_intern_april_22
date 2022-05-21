@@ -43,69 +43,164 @@
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
                 </p>
-                <button class="btn btn-primary mybtn">Click Me</button>
+                <button class="btn btn-primary mybtn" data-toggle="modal" data-target="#devModal">Click Me</button>
                 <button class="btn btn-success">Click Me</button>
                 <button class="btn btn-warning">Click Me</button>
                 <button class="btn btn-danger">Click Me</button>
                 <button class="btn btn-info">Click Me</button>
+
+                <span class="label label-primary">Lunch</span>
+            </div>
+
+            <div id="devModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Details Block</h4>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Food Text</h4>
+                            <p>
+                                Food Text is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="carousel slide" id="devSlider" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#devSlider" data-slide-to="0" class="active"></li>
+                    <li data-target="#devSlider" data-slide-to="1"></li>
+                    <li data-target="#devSlider" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="food-tile.png" alt="food"/>
+                        <div class="carousel-caption">
+                            <h3>Food Wallpaper</h3>
+                            <p>This is slider image</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="food-wallpaper.png" alt="food"/>
+                    </div>
+                    <div class="item">
+                        <img src="nightlife.png" alt="food"/>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#devSlider" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#devSlider" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
             <hr/>
             <span class="glyphicon glyphicon-envelope"></span>
             <span class="glyphicon glyphicon-print"></span>
             <span class="glyphicon glyphicon-trash iconDelete"></span>
             <hr/>
-            <table class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th>Roll No</th>
-                        <th>Name</th>
-                        <th>Class</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Shruti</td>
-                        <td>Ui</td>
-                        <td>
-                            <button class="btn btn-primary">
-                                <span class="glyphicon glyphicon-edit"></span> Edit
-                            </button>
-                            <button class="btn btn-danger">
-                                <span class="glyphicon glyphicon-trash"></span>
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Nitish</td>
-                        <td>React</td>
-                        <td>
-                            <button class="btn btn-primary">
-                                <span class="glyphicon glyphicon-edit"></span>
-                            </button>
-                            <button class="btn btn-danger">
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Nikita</td>
-                        <td>Node</td>
-                        <td>
-                            <button class="btn btn-primary">
-                                Edit <span class="glyphicon glyphicon-edit"></span>
-                            </button>
-                            <button class="btn btn-danger">
-                                Delete <span class="glyphicon glyphicon-trash"></span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="media">
+                <div class="media-left">
+                    <img src="food-wallpaper.png" alt="fb" class="media-object" style="width:200px"/>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Food Text</h4>
+                    <p>
+                        Food Text is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                    </p>
+                </div>
+            </div>
+            <div class="media">
+               
+                <div class="media-body">
+                    <h4 class="media-heading">Food Text</h4>
+                    <p>
+                        Food Text is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+                    </p>
+                </div>
+                <div class="media-right">
+                    <img src="food-wallpaper.png" alt="fb" class="media-object" style="width:200px"/>
+                </div>
+            </div>
+            <div class="row">
+                <div id="first" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="second" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="third" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="fourth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="fifth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="sixth" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+                <div id="seventh" class="col-lg-2 col-md-3 col-sm-4 col-xs-6"></div>
+            </div>
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Students
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Shruti</td>
+                                <td>Ui</td>
+                                <td>
+                                    <button class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-edit"></span> Edit
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Nitish</td>
+                                <td>React</td>
+                                <td>
+                                    <button class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Nikita</td>
+                                <td>Node</td>
+                                <td>
+                                    <button class="btn btn-primary">
+                                        Edit <span class="glyphicon glyphicon-edit"></span>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        Delete <span class="glyphicon glyphicon-trash"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            
             <img src="food-wallpaper.png" alt="wallpaper" class="img-responsive" />
         </div>
     </body>
