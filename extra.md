@@ -195,3 +195,7 @@ xxl > 1400px
 
 https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
 https://icons.getbootstrap.com/
+
+Mini Project1
+Code Link > https://drive.google.com/file/d/13VEQbri-6vNVRBvseTg01anBDhdcG-F0/view?usp=sharing
+Recording Link > https://drive.google.com/file/d/1DxRmHLDd-d4mpMDm1M_bEEsd9WIG0G6L/view?usp=sharing
