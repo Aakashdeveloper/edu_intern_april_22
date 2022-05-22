@@ -192,3 +192,6 @@ md > 768px
 lg > 992px
 xl > 1200px
 xxl > 1400px
+
+https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+https://icons.getbootstrap.com/
