@@ -1,0 +1,151 @@
+<html>
+    <head>
+        <title>Home Page</title>
+        <link href="home.css" rel="stylesheet" type="text/css"/>
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <!--Header Section-->
+        <header>
+            <div id="icon">
+                <h1>Xomato</h1>
+            </div>
+            <div id="social">
+                <a href="www.facebook.com" target="_blank">
+                    <img src="https://i.ibb.co/dtzG625/facebook.png" alt="fb" class="slogo"/>
+                </a>
+                <a href="www.facebook.com" target="_blank">
+                    <img src="https://i.ibb.co/19H5LvT/insta.png" alt="fb" class="slogo"/>
+                </a>
+                <a href="www.facebook.com" target="_blank">
+                    <img src="https://i.ibb.co/w07K2Vn/youtube1.png" alt="fb" class="slogo"/>
+                </a>
+            </div>
+        </header>
+        <!--Search Section-->
+        <div id="search">
+            <div id="container">
+                <div id="logo">
+                    <span>E!</span>
+                </div>
+                <div id="heading">
+                    Find The Best Restaurants Near You
+                </div>
+                <div class="dropdown">
+                    <select id="city" onChange="getRest()">
+                        <option>----SELECT YOUR CITY----</option>
+                    </select>
+                    <select class="restSelect">
+                        <option>----SELECT YOUR RESTAURANTS----</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--QuickSearch Section-->
+        <div id="quickSearch">
+            <span id="quickHeading">Quick Search</span>
+            <span id="quickSubHeading">Discover Restaurants By Meal</span>
+            <div id="main">
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="image/dinner.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Dinner</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Food Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="image/drinks.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Drinks</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Food Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="image/nightlife.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Nightlife</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Food Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="image/nightlife.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Nightlife</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Food Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="image/sacks.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Snacks</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Food Near You
+                        </div>
+                    </div>
+                </div>
+                <div class="tileContainer">
+                    <div class="tileComponent1">
+                        <img src="image/lunch.png" alt="dinner"/>
+                    </div>
+                    <div class="tileComponent2">
+                        <div class="componentHeading">
+                            <a href="../listing/listing.html">Lunch</a>
+                        </div>
+                        <div class="componentSubHeading">
+                            Best Place For Food Near You
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!--Footer Section-->
+        <footer>
+            <p id="footerText">&copy; Developer Funnel</p>
+            <hr/>
+            <div class="footDiv">
+                <p>Contact Us</p>
+                <p>About Us</p>
+            </div>
+            <div class="footDiv">
+                <p>Contact Us</p>
+                <p>About Us</p>
+            </div>
+            <div class="footDiv noBorder">
+                <p>Contact Us</p>
+                <p>About Us</p>
+            </div>
+        </footer>
+        <script>
+            window.onload = getCity()
+        </script>
+    </body>
+</html>
