@@ -203,3 +203,39 @@ Recording Link > https://drive.google.com/file/d/1DxRmHLDd-d4mpMDm1M_bEEsd9WIG0G
 
 ////dummy api
 npx json-server --watch data.json --port 9800
+
+Async single threaded non blocking I/O
+
+Code
+||
+byte Code
+||
+Machine Code
+
+LibU + c++
+v8 Engine
+open source
+/////////////
+JSON
+//////
+2,001,057
+
+//////
+npm > node package manager
+package.json
+> Entry point to the app
+> conatins scirpts > start build dev
+> contains all the package using in the app
+> meta data (name,version,description)
+
+/// Step to generate package.json
+> open cmd/terminal
+> go inside the folder
+> npm init
+> Answer all question
+> type "yes"
+
+/// Step to install package
+> open cmd/terminal
+> go inside the folder
+> npm i packageName / npm install packageName
