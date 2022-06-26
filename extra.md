@@ -239,3 +239,34 @@ package.json
 > open cmd/terminal
 > go inside the folder
 > npm i packageName / npm install packageName
+
+
+nodemon
+
+localDependency
+> local to the folder
+> used in same folder
+> Max Dependencies should go local
+
+globalDependency
+> Install in your Laptop
+> Need Admin permission
+> used manily for Run the app and generate
+> Any dependencies require before the app start
+> Will not add to package.JSON
+
+devDependency
+> Same like local
+> dependencies use only at time of development
+
+///how to install globalDependency
+#window
+> open cmd as adminstrator
+> npm i -g packageName
+
+#mac/linux
+> open terminal
+> sudo npm i -g packageName
+
+npm start
+npm run dev

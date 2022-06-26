@@ -1,0 +1,15 @@
+{
+  "name": "staticapi",
+  "version": "1.0.0",
+  "description": "this is for static api server",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticapi.js",
+    "dev":"modemon http.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "developer funnel",
+  "license": "ISC"
+}
