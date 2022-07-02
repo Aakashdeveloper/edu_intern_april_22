@@ -1,0 +1,108 @@
+Sql > structured
+NoSql > unstructured
+
+RollNo | Hindi | English |
+  1    |  80   |         |
+  2    |       |  76     |
+  3    |  87   |         |
+
+[
+    {
+        rollNo:1,
+        hindi:80
+    },
+    {
+        rollNo:2,
+        English:76
+    },
+    {
+        rollNo:3,
+        hindi:87,
+        computer:79
+    }
+]
+
+
+Sql       NoSql
+Database  Database
+table     Collection
+row       document
+select    find
+insert    insert
+update    update
+delete    remove
+
+///////
+mongodb setup 
+
+#local
+#window
+> download & install mongo (https://www.mongodb.com/try/download/community)
+> in c drive make folder by name of data  (C:\data)
+> inside data make folder db (C:\data\db)
+
+>>>>>Step to start sever<<<<<<
+> open cmd
+> go inside bin folder using cd
+    (C:\Program Files\mongodb\server\5.2\bin)
+> mongod  (this will start mongoserver on port 27017)
+> DO NOT CLOSE CMD
+
+>>>>>Step to start client<<<<<<
+> open new cmd
+> go inside bin folder using cd
+    (C:\Program Files\mongodb\server\5.2\bin)
+> mongo (this will start cli to test query)
+
+#mac/linux
+> download & install mongo (https://www.mongodb.com/try/download/community)
+> open terminal mkdir data/db
+
+>>>>>Step to start sever<<<<<<
+> open terminal
+> mongod --dbpath data/db
+
+>>>>>Step to start client<<<<<<
+> open terminal
+> mongo
+
+#Cloud setup
+> go to mongodb atlas (https://cloud.mongodb.com/)
+> signup with google/github
+> Create > shared > aws 
+> cloud-teir > M0 Sandbox > click createcluster
+
+
+Database Access> Add new user > 
+Provide username/password
+(test,test123)
+
+Network Access > Add Ip Address >
+0.0.0.0/0, anystring
+
+
+////////////////Download and Install Compass///////////
+https://www.mongodb.com/products/compass
+
+
+/////////
+To See All Dbs
+> show dbs
+
+To Go inside Db
+> use dbname
+
+To see all collections
+> show collections
+
+To Find the documents
+> db.collectionName.find()
+// only for cli
+> db.collectionName.find().pretty()
+
+
+//To Create db
+use aprilintern
+
+//Insert data
+db.user.insert({name:'John'})

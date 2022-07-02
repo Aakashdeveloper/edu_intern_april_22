@@ -56,3 +56,47 @@ var orderData = {
     '1500-2000': 44,
     'Above 2000': 76
 };
+
+let out = 0;
+for(key in orderData){
+    out += Number(orderData[key])
+}
+
+/*
+20/199*100
+10.050251256281408
+29/199*100
+14.572864321608039
+*/
+
+function getPercent(orderData){
+    let total = 0;
+    for(key in orderData){
+        total += Number(orderData[key])
+    }
+
+    let output = [];
+    let count = 0;
+    for(key in orderData){
+        let percentValue = ((orderData[key]/total)*100).toFixed(2)
+        count = count+1;
+        let myObj = {}
+        myObj.id = count
+        myObj.order = key;
+        myObj.order_percentage = `${percentValue} %`;
+        myObj.restaurant="Punjabi Tadka";
+        output.push(myObj)
+    }
+
+    return output
+
+}
+
+/*
+{id: 1, order: 'Below 500', order_percentage: '10.05 %', restaurant: 'Punjabi Tadka'}
+1: {id: 2, order: '500-1000', order_percentage: '14.57 %', restaurant: 'Punjabi Tadka'}
+2: {id: 3, order: '1000-1500', order_percentage: '15.08 %', restaurant: 'Punjabi Tadka'}
+3: {id: 4, order: '1500-2000', order_percentage: '22.11 %', restaurant: 'Punjabi Tadka'}
+4: {id: 5, order: 'Above 2000', order_percentage: '38.19 %', restaurant: 'Punjabi Tadka'}
+*/
+
