@@ -1,12 +1,13 @@
 //Page 1
 
 # List of city
-
+> http://localhost:9870/location
 # List of Restaurant
-
+> http://localhost:9870/restaurants
 # Restaurant wrt City
-
+> http://localhost:9870/restaurants?stateId=4
 # List of QuickSearch
+> http://localhost:9870/mealtype
 
 //Page 2
 # Restaurant wrt Meal

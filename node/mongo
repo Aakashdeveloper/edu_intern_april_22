@@ -106,3 +106,23 @@ use aprilintern
 
 //Insert data
 db.user.insert({name:'John'})
+db.user.insert({name:'Chirag'})
+db.user.insert({name:'Amrita'})
+
+_id > objectId (unique value, cannot be duplicate)
+12bytes
+5bytes > RandomNumber
+3bytes > Series
+4bytes > timestamp
+
+db.user.insert({_id:1,name:'Bhumika'})
+
+db.user.insert({_id:1,name:'Aditya'})
+
+///find on basis of condition
+
+db.restaurants.find({state_id:1,average_rating:5})
+
+db.restaurants.find({condition},{projection})
+
+db.restaurants.find({state_id:1},{restaurant_name:1,_id:0,cost:1})

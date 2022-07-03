@@ -270,3 +270,20 @@ devDependency
 
 npm start
 npm run dev
+
+CRUD
+Create > Insert>  Post
+Read > Read Data> Get
+Update> Update>   Put
+Delete > Delete>  Delete
+
+params
+> What we pass after / in url
+> it is complusry to define
+> If Define complusry to pass
+> Should be use for single entry
+QueryParamd
+> What we pass after ? in url
+> No Need to define
+> Not complusry to pass
+> Should be use for multiple values
