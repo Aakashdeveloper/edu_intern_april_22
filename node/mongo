@@ -126,3 +126,35 @@ db.restaurants.find({state_id:1,average_rating:5})
 db.restaurants.find({condition},{projection})
 
 db.restaurants.find({state_id:1},{restaurant_name:1,_id:0,cost:1})
+
+db.restaurants.find({'mealTypes.mealtype_id':{$in:[3,1,5]}},{restaurant_name:1,_id:0,mealTypes:1})
+
+////update////
+db.collection.update(
+    {condition},
+    {update}
+)
+
+db.orders.update(
+    {orderId:3},
+    {
+        $set:{
+            "status":"Delivered"
+        }
+    }
+)
+
+db.orders.update(
+    {orderId:3},
+    {
+        $unset:{
+            "status":1
+        }
+    }
+)
+
+/// delete all records 
+db.orders.remove({})
+
+/// delete particular records 
+db.orders.remove({orderId:1})

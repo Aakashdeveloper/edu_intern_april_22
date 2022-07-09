@@ -5,11 +5,16 @@ let dotenv = require('dotenv');
 dotenv.config();
 let port = process.env.PORT || 7800;
 let mongo = require('mongodb');
+let cors = require('cors')
 let MongoClient = mongo.MongoClient;
-let mongoUrl = process.env.MongoLiveUrl;
+let bodyParser = require('body-parser')
+let mongoUrl = process.env.MongoLocalUrl;
 let db;
 
 app.use(morgan('common'))
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/',(req,res)=>{
     res.send('Hiii From Express')
@@ -23,13 +28,62 @@ app.get('/location',(req,res) => {
 })
 
 app.get('/restaurants',(req,res) => {
-    //let id = req.query.stateId;
-    let {stateId} = req.query
-    db.collection('restaurants').find({state_id:Number(stateId)}).toArray((err,result) => {
+    let query = {}
+    let stateId = Number(req.query.stateId);
+    let mealId = Number(req.query.mealId);
+    if(stateId){
+       query = {state_id:stateId}
+    }else if(mealId){
+         query = {"mealTypes.mealtype_id":mealId}
+    } else {
+        query = {}
+    }
+    db.collection('restaurants').find(query).toArray((err,result) => {
         if(err) throw err;
         res.send(result)
     })
 })
+
+app.get(`/filter/:mealId`,(req,res) => {
+    let query = {}
+    let sort = {cost:1}
+    let mealId = Number(req.params.mealId);
+    let cuisineId = Number(req.query.cuisineId);
+    let lcost = Number(req.query.lcost);
+    let hcost = Number(req.query.hcost);
+    if(req.query.sort){
+        sort={cost:req.query.sort}
+    }
+    if(cuisineId && lcost && hcost){
+        query = {
+            "mealTypes.mealtype_id":mealId,
+            "cuisines.cuisine_id":cuisineId,
+            $and:[{cost:{$gt:lcost,$lt:hcost}}]
+        }
+    }
+    else if(cuisineId){
+        query = {
+            "mealTypes.mealtype_id":mealId,
+            "cuisines.cuisine_id":cuisineId
+        }
+    }else if(lcost && hcost){
+        query = {
+            "mealTypes.mealtype_id":mealId,
+            $and:[{cost:{$gt:lcost,$lt:hcost}}]
+        }
+    }
+    else{
+        query = {
+            "mealTypes.mealtype_id":mealId,
+        }
+    }
+    db.collection('restaurants').find(query).sort(sort).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+
+})
+
 
 app.get('/mealType',(req,res) => {
     db.collection('mealType').find().toArray((err,result) => {
@@ -37,6 +91,48 @@ app.get('/mealType',(req,res) => {
         res.send(result)
     })
 })
+
+app.get('/details/:id',(req,res) => {
+    let id = Number(req.params.id)
+    db.collection('restaurants').find({restaurant_id:id}).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+app.get('/menu/:id',(req,res) => {
+    let id = Number(req.params.id)
+    db.collection('menu').find({restaurant_id:id}).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+app.post('/menuItem',(req,res) => {
+    if(Array.isArray(req.body.id)){
+        db.collection('menu').find({menu_id:{$in:req.body.id}}).toArray((err,result) => {
+            if(err) throw err;
+            res.send(result)
+        })
+    }else{
+        res.send('Invalid Input')
+    }
+})
+
+app.post('/placeOrder',(req,res) => {
+    db.collection('orders').insert(req.body, (err,result) => {
+        if(err) throw err;
+        res.send('Order Placed')
+    })
+})
+
+// app.get('/details/:id',(req,res) => {
+//     let id = mongo.ObjectId(req.params.id)
+//     db.collection('restaurants').find({_id:id}).toArray((err,result) => {
+//         if(err) throw err;
+//         res.send(result)
+//     })
+
+// })
 
 // app.get('/restaurants/:id',(req,res) => {
 //     //let id = req.params.id;
@@ -50,7 +146,7 @@ app.get('/mealType',(req,res) => {
 // connection with db
 MongoClient.connect(mongoUrl,(err,client) =>{
     if(err) console.log(`Error While Connecting`);
-    db = client.db('augintern');
+    db = client.db('internfeb');
     app.listen(port,() => {
         console.log(`listening on port ${port}`)
     })
