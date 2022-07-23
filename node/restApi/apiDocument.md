@@ -48,8 +48,16 @@
 
 //Page5 
 # List of order place
+> http://localhost:9870/orders
 # List of order place wrt to email
+> http://localhost:9870/orders?email=nidhi@gmail.com
 # update order details with payment
+(put) http://localhost:9870/updateOrder/2
+{
+	"status":"TXN_SUCCESS",
+	"bank_name":"SBI",
+	"date":"10/07/2022"
+}
 
-///////
-Delete order
+# Delete order
+> (delete) http://localhost:9870/deleteOrder/62cacbbd1b948d5c06d7fee0

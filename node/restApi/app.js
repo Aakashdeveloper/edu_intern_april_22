@@ -20,12 +20,37 @@ app.get('/',(req,res)=>{
     res.send('Hiii From Express')
 })
 
+function auth(key){
+    if(process.env.KEY == key){
+        return true
+    }else{
+        return false
+    }  
+}
+
 app.get('/location',(req,res) => {
-    db.collection('location').find().toArray((err,result) => {
-        if(err) throw err;
-        res.send(result)
-    })
+    let key = req.header('x-basic-token')
+    if(auth(key)) {
+        db.collection('location').find().toArray((err,result) => {
+            if(err) throw err;
+            res.send(result)
+        })
+    } else {
+        res.send('Unauthorized Request')
+    }
 })
+
+// app.get('/location',(req,res) => {
+//     let key = req.header('x-basic-token')
+//     if(process.env.KEY == key){
+//         db.collection('location').find().toArray((err,result) => {
+//             if(err) throw err;
+//             res.send(result)
+//         })
+//     }else{
+//         res.send('Unauthorized Request')
+//     }
+// })
 
 app.get('/restaurants',(req,res) => {
     let query = {}
@@ -122,6 +147,43 @@ app.post('/placeOrder',(req,res) => {
     db.collection('orders').insert(req.body, (err,result) => {
         if(err) throw err;
         res.send('Order Placed')
+    })
+})
+
+app.get('/orders',(req,res) => {
+    let email = req.query.email;
+    let query = {}
+    if(email){
+        query={email}
+    }
+    db.collection('orders').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+app.put('/updateOrder/:id',(req,res) => {
+    let oid = Number(req.params.id);
+    db.collection('orders').updateOne(
+        {orderId:oid},
+        {
+            $set:{
+                "status":req.body.status,
+                "bank_name":req.body.bank_name,
+                "date":req.body.date,
+            }
+        },(err,result) => {
+            if(err) throw err;
+            res.send('Order Updated')
+        }
+    )
+})
+
+app.delete('/deleteOrder/:id',(req,res) => {
+    let _id = mongo.ObjectId(req.params.id);
+    db.collection('orders').remove({_id},(err,result) => {
+        if(err) throw err;
+        res.send('Order Deleted')
     })
 })
 
