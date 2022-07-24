@@ -310,3 +310,16 @@ JWT > JSON Web Token
 npm i bcryptjs body-parser cors express jsonwebtoken mongoose
 
 https://dashboard.paytm.com/next/activate
+
+https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
+
+/////React
+> Frontend library that help to build single page applications
+using component based structure
+
+///
+Step to generate react appp
+////
+> open cmd/terminal
+> go inside the folder
+> npx create-react-app appname
