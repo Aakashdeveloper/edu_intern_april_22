@@ -323,3 +323,41 @@ Step to generate react appp
 > open cmd/terminal
 > go inside the folder
 > npx create-react-app appname
+
+
+#####Window#####
+>>>>>>ONE TIME<<<<<<
+>> open cmd as adminstrator
+>> npm i -g create-react-app
+
+>>>>>>Every time when i want new app<<<<<<
+> open cmd
+> Go inside folder  where you want app
+> create-react-app appname
+
+#####Mac/Linux#####
+>>>>>>ONE TIME<<<<<<
+>> open terminal
+>> sudo npm i -g create-react-app
+
+>>>>>>Every time when i want new app<<<<<<
+> open terminal
+> Go inside folder  where you want app
+> create-react-app appname
+
+
+React > is the main library
+React-DOM > help to render content
+React-scirpts > help to run the app
+
+
+functional
+> Dumb Component
+> Display purpose only
+> cannot maintain state
+
+class
+> Logical Component
+> Any kind of logic,api calling as well as display
+> can maintain state
+hooks
