@@ -361,3 +361,27 @@ class
 > Any kind of logic,api calling as well as display
 > can maintain state
 hooks
+
+///////////
+State
+> Act like a local variable
+> Each component can have its own state
+> Value of state can be update (mutable)
+> Any data interaction will happen through state
+
+Props
+> Help to transfer the data
+> We cannot update the value of props (immutable)
+> We can only transfer data between child & parent component
+
+
+parent => child (props)
+child => parent (props with function)
+
+parent
+function add(a,b){
+    return a+b
+}
+
+child
+add(1,2)
