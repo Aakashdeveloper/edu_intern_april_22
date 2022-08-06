@@ -385,3 +385,7 @@ function add(a,b){
 
 child
 add(1,2)
+
+History > for redirect
+Location > for query params
+match > for params
