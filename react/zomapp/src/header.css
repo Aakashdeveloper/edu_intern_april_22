@@ -1,0 +1,28 @@
+body{
+    margin:auto
+}
+a{
+    text-decoration: none;
+}
+/*Header Css*/
+header{
+    height:60px;
+    background-color:#3b2632;
+    /* position:sticky; */
+    width:100%
+    /* border:2px solid red */
+}
+#icon{
+    float:left
+}
+#social{
+    float:right
+}
+
+.slogo{
+    height:50px;
+    width:50px;
+}
+h1{
+    color:white
+}
