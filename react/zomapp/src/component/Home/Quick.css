@@ -53,7 +53,7 @@
     float:left;
 }
 
-.componentHeading >a {
+.componentHeading >span {
     color:#3b2632;
     font-size:25px;
 }
