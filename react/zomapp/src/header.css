@@ -13,7 +13,14 @@ header{
     /* border:2px solid red */
 }
 #icon{
-    float:left
+    float:left;
+    color:white;
+    font-size:35px;
+    margin-left:2%
+}
+#icon > a {
+    color:white;
+    text-decoration: none;
 }
 #social{
     float:right

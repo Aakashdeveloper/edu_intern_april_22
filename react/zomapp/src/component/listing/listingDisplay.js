@@ -16,7 +16,7 @@ const ListingDisplay = (props) => {
                                 </div>
                                 <div className="col-md-7">
                                     <div className="hotel_name">
-                                        <Link to='/'>
+                                        <Link to={`/details?restid=${item.restaurant_id}`}>
                                             {item.restaurant_name}
                                         </Link>
                                         <div className="city_name">{item.address}</div>
@@ -44,7 +44,20 @@ const ListingDisplay = (props) => {
                         </div>
                     )
                 })
+            }else{
+                return(
+                    <div>
+                        <h2>No Data As Per Filter</h2>
+                    </div>
+                )
             }
+        }else{
+            return(
+                <div>
+                    <img src="/images/loader.gif" alt="loader"/>
+                    <h2>Loading.....</h2>
+                </div>
+            )
         }
 
     }

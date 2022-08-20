@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './header.css';
+import {Link} from 'react-router-dom';
 
 class Header extends Component{
 
@@ -7,7 +8,7 @@ class Header extends Component{
         return(
             <header>
                 <div id="icon">
-                    <h1>Xomato</h1>
+                    <Link to="/">Xomato</Link>
                 </div>
                 <div id="social">
                     <a href="www.facebook.com" target="_blank">

@@ -410,3 +410,19 @@ match > for params
        
 (get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
 https://developerpayment.herokuapp.com/paynow
+
+
+var a = [6,9,23,45,9,7]
+undefined
+a.splice(a.indexOf(45),1)
+[45]
+a
+(5) [6, 9, 23, 9, 7]
+a.splice(a.indexOf(9),1)
+[9]
+a.splice(a.indexOf(9),1)
+[9]
+a
+(3) [6, 23, 7]
+a.splice(a.indexOf(9),1)
+[7]
