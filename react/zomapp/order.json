@@ -1,0 +1,24 @@
+{
+  "orders": [
+    {
+      "id": 9263,
+      "hotel_name": "Burger King",
+      "name": "Ankit",
+      "email": "ankit@gmail.com",
+      "cost": 348,
+      "phone": 9876543210,
+      "address": "IT 98 Delhi",
+      "menuItem": "52,53,51"
+    },
+    {
+      "id": 4683,
+      "hotel_name": "Cafe Wink",
+      "name": "Ankit",
+      "email": "ankit@gmail.com",
+      "cost": 1110,
+      "phone": 9876543210,
+      "address": "IT 98 Delhi",
+      "menuItem": "57,58,59,60"
+    }
+  ]
+}
