@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import OrderDisplay from './orderDisplay'
-import Header from '../../Header';
 
 const oUrl = "http://localhost:8230/orders"
 
@@ -18,7 +17,6 @@ class ViewOrder extends Component{
     render(){
         return(
            <>
-                <Header/>
                 <OrderDisplay orderData={this.state.orders}/>
            </>
         )

@@ -5,7 +5,6 @@ import 'react-tabs/style/react-tabs.css';
 import axios from 'axios'
 import {Link} from 'react-router-dom';
 import MenuDisplay from './menuList';
-import Header from '../../Header';
 
 const rurl = "http://zomatoajulypi.herokuapp.com/details";
 const murl = " https://zomatoajulypi.herokuapp.com/menu";
@@ -37,7 +36,6 @@ class Details extends Component {
         let {details} = this.state
         return(
             <>
-                <Header/>
                 <div id="mainContent">
                     <div className="imgDiv">
                         <img src={details.restaurant_thumb} alt="image"/>

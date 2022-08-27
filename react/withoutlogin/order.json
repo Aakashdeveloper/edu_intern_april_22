@@ -19,16 +19,6 @@
       "phone": 9876543210,
       "address": "IT 98 Delhi",
       "menuItem": "57,58,59,60"
-    },
-    {
-      "id": 5237,
-      "hotel_name": "Domino's Pizza",
-      "name": "Ankit",
-      "email": "ankit@gmail.com",
-      "cost": 99,
-      "phone": 9876543210,
-      "address": "IT 98 Delhi",
-      "menuItem": "1"
     }
   ]
 }
