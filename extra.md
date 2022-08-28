@@ -445,3 +445,12 @@ a.splice(a.indexOf(9),1)
 /******UserInfo*****/
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
+
+
+> Heroku
+BackendApi
+Login Api
+Payment Gateway
+
+> Netlify
+React App

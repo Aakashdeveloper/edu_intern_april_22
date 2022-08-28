@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import Header from '../../Header';
 
-const url = "http://developerjwt.herokuapp.com/api/auth/login";
+const url = "https://developerjwt.herokuapp.com/api/auth/login";
 
 class Login extends Component{
 
@@ -10,7 +10,7 @@ class Login extends Component{
 
         this.state={
             email:'nidhi@gmail.com',
-            password:12345678,
+            password:'12345678',
             message:''
         }
     }

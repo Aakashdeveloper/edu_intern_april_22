@@ -16,7 +16,7 @@ class Header extends Component{
         }
     }
 
-    hadleLogout = () => {
+    handleLogout = () => {
         sessionStorage.removeItem('ltk')
         sessionStorage.removeItem('userInfo')
         sessionStorage.setItem('loginStatus','LoggedOut')
@@ -36,9 +36,8 @@ class Header extends Component{
                     <Link className="btn btn-success" to="/login">
                     <span className="glyphicon glyphicon-user"></span> Hi {data.name}   
                     </Link> &nbsp;
-                    <button className="btn btn-danger">
-                        <span className="glyphicon glyphicon-log-out"
-                        onClick={this.hadleLogout}></span>  Logout   
+                    <button className="btn btn-danger" onClick={this.handleLogout}>
+                        <span className="glyphicon glyphicon-log-out"></span>  Logout   
                     </button> 
                 </>
             )
